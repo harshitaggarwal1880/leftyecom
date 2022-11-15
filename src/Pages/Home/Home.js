@@ -8,7 +8,7 @@ const Home = () => {
   `;
 
   return (
-    <Homediv>Home</Homediv>
+    <Homediv></Homediv>
   )
 
 

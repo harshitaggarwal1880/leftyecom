@@ -16,16 +16,18 @@ const Header = () => {
     position: relative;
   
     .logo{
-        height: 4rem;
-        border: 2px solid black;
-        border-radius: 1rem;
+        height: 5rem;
+        width: 12rem;
+        padding: 1rem;
     }
+
+
   `;
   
     return (
     <MainHeader>
         <Link to="/"> 
-            <img className='logo' src='Images/EditLogo.png' alt='Not Found'/> 
+            <img className='logo' src='Images/mainlogo.png' alt='Not Found'/> 
         </Link> 
         <Navbar/> 
     </MainHeader>
