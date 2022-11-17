@@ -1,8 +1,16 @@
 import React from 'react'
+import Slider from '../../Components/Slider/Slider'
 
 const About = () => {
+  
+  const data = {
+    title: "Lefty Ecommerce"
+  }
+  
   return (
-    <div>About</div>
+    <>
+      <Slider data={data} />
+    </>
   )
 }
 

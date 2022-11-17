@@ -104,7 +104,7 @@ const Navbar = () => {
             }
 
             .navbar-list{
-                width: 100vw;
+                width: 100%;
                 height: 100vh;
                 position: absolute;
                 top: 0;
@@ -127,7 +127,7 @@ const Navbar = () => {
                 visibility: visible;
                 opacity: 1;
                 transform: translateX(0%);
-                // z-index: 999;
+                z-index: 99;
                 transform-origin: right;
                 transition: all 3s linear;
             }
