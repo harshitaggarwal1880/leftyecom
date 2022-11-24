@@ -10,6 +10,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import GlobalStyle from './Pages/GlobalStyle/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 
 
 const App = () => {
@@ -55,8 +56,8 @@ const App = () => {
         <Route exact path='/product:id' element={<Product/>} />
         <Route exact path='/cart' element={<Cart/>} />
         <Route exact path='*' element={<NotFound/>} />
-        
       </Routes> 
+      <Footer/>
 
     </Router>
     </ThemeProvider>   
