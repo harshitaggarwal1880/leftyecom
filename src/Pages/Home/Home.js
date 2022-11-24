@@ -1,4 +1,5 @@
 import React from 'react'
+import Partners from '../../Components/Partners/Partners';
 import Services from '../../Components/Services/Services';
 // import styled from 'styled-components'
 import Slider from '../../Components/Slider/Slider';
@@ -17,6 +18,7 @@ const Home = () => {
     <>
     <Slider  data={data} />
     <Services/>
+    <Partners/>
     </>
   )
 
