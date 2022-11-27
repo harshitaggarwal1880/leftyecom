@@ -11,6 +11,7 @@ import GlobalStyle from './Pages/GlobalStyle/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+import { ProductProvider } from './Contexts/productcontext';
 
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
 
   return (
 
+    <ProductProvider>
     <ThemeProvider theme={theme}>
     <Router> 
 
@@ -61,6 +63,7 @@ const App = () => {
 
     </Router>
     </ThemeProvider>   
+    </ProductProvider> 
    
   )
 }

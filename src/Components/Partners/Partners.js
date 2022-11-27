@@ -18,7 +18,7 @@ const Partners = () => {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 2rem;
+            margin: 3rem;
             gap: 4rem;
         }
 
@@ -35,14 +35,13 @@ const Partners = () => {
         .icon:hover{
             transform: scale(1.1);
             transition: 0.3s;
-
         }
 
     `;
 
 return (
     <Partners>
-        <h2 className='heading'> Trusted Partnets </h2>
+        <h2 className='heading'> Trusted Partners </h2>
         <div className="container">        
             <img src="Images/red.svg" className='icon' alt="Not Found"/>
             <img src="Images/node.svg" className='icon' alt="Not Found"/>

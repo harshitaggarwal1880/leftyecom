@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { BsInstagram, BsFacebook, BsTwitter } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const Wrapper = styled.section`
@@ -11,7 +12,7 @@ const Footer = () => {
 
         .icon{
             font-size: 2rem;
-            
+            color: aqua;
         }
 
         .container{
@@ -51,8 +52,9 @@ const Footer = () => {
         .page-item{
             list-style: none;
             margin: 1rem;
-
-            // border-bottom: 2px solid;
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
         }
 
         .copyright{
@@ -69,9 +71,9 @@ const Footer = () => {
             <div className="pages">
                 <h3 className='heading'>All Pages</h3>
                 <ul className='pages-list'>
-                    <li className='page-item'>Home</li>
-                    <li className='page-item'>About Us</li>
-                    <li className='page-item'>Contact Us</li>
+                    <Link to="/" className='page-item'>Home</Link>
+                    <Link to="/about" className='page-item'>About Us</Link>
+                    <Link to="/contact" className='page-item'>Contact Us</Link>
                     <li className='page-item'>Privacy policy</li>
                     <li className='page-item'>Terms & Conditions</li>
                 </ul>

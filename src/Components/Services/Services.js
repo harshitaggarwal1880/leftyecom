@@ -28,8 +28,7 @@ const Services = () => {
         display: flex;
         width: 80%;
         gap: 1rem;
-        margin: 3rem 2rem;
-        // padding: 31rem;
+        margin: 2rem 1rem;
         justify-content: space-around;
         flex-wrap: wrap;
         align-items: center;
