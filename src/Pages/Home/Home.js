@@ -1,4 +1,5 @@
 import React from 'react'
+import FeaturedProducts from '../../Components/FeaturedProducts/FeaturedProducts';
 import Partners from '../../Components/Partners/Partners';
 import Services from '../../Components/Services/Services';
 // import styled from 'styled-components'
@@ -16,7 +17,8 @@ const Home = () => {
 
   return (
     <>
-    <Slider  data={data} />
+    <Slider data={data} />
+    <FeaturedProducts/>
     <Services/>
     <Partners/>
     </>

@@ -14,7 +14,10 @@ const ReducerProvider = (props) => {
     isLoading: false,
     isError: false,
     products: [],
-    featured: []
+    featured: [],
+    isSingleLoading: false,
+    isSingleError: false,
+    SingleProduct: {},
   };
 
   const [state2, dispatch] = useReducer(reducer, initialstate);
@@ -32,13 +35,27 @@ const ReducerProvider = (props) => {
     }
   };
 
+
+  const getSingleProduct = async (url)=>{
+    dispatch({type: "SET_SINGLE_LOADING"})
+    try {
+      const res = await axios.get(url);
+      const product_data = res.data;
+      console.log(product_data);
+      dispatch({type: "GET_SINGLE_DATA", payload: product_data})
+    } catch (error) {
+      dispatch({type: "SINGLE_ERROR"})
+    }
+  }
+
+
   useEffect(() => {
     getapiproducts(ApiUrl);
   }, []);
 
   return (
     // here it is like a provider which provide state to all childrens like app.js component
-    <ReducerContext.Provider value={{ ...state2 }}>
+    <ReducerContext.Provider value={{ ...state2, getSingleProduct }}>
       {/* here props.children refers to the app.js all component which wrapped in productstate  */}
       {props.children}
     </ReducerContext.Provider>

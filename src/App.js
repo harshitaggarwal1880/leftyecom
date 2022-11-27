@@ -12,6 +12,7 @@ import { ThemeProvider } from 'styled-components';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import { ProductProvider } from './Contexts/productcontext';
+import { ReducerProvider } from './Contexts/reducercontext';
 
 
 const App = () => {
@@ -43,7 +44,7 @@ const App = () => {
 
 
   return (
-
+    <ReducerProvider>
     <ProductProvider>
     <ThemeProvider theme={theme}>
     <Router> 
@@ -64,7 +65,7 @@ const App = () => {
     </Router>
     </ThemeProvider>   
     </ProductProvider> 
-   
+    </ReducerProvider>
   )
 }
 
