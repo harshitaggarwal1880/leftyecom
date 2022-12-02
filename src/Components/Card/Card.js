@@ -20,7 +20,7 @@ const Card = (props) => {
     }
 
     .card::before {
-      content: "";
+      content: "";7
       position: absolute;
       top: -50%;
       width: 100%;
@@ -120,7 +120,7 @@ const Card = (props) => {
   return (
       <Card>
       <div class="card">
-        <Link to={`/product:${props.data.id}`}>
+        <Link to={`/product/${props.data.id}`}>
         <div class="imgBox">
           <img
             src={props.data.image}
