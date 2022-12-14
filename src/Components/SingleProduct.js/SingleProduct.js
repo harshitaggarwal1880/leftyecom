@@ -2,6 +2,9 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { BsInstagram, BsFacebook, BsTwitter } from "react-icons/bs";
+import ReviewStars from "../ReviewStars/ReviewStars";
+import Colors from "../Colors/Colors";
+import AddtoCart from "../Add_to_Cart/AddtoCart";
 
 const SingleProduct = (props) => {
   const productdata = props.data;
@@ -139,6 +142,8 @@ const SingleProduct = (props) => {
     .product-detail ul li span {
       font-weight: 400;
     }
+
+    
     .purchase-info {
       margin: 1.5rem 0;
     }
@@ -147,6 +152,7 @@ const SingleProduct = (props) => {
       border: 1.5px solid #ddd;
       border-radius: 25px;
       text-align: center;
+      font-size: 1.2rem;
       padding: 0.45rem 0.8rem;
       outline: 0;
       margin-right: 0.2rem;
@@ -200,7 +206,7 @@ const SingleProduct = (props) => {
         grid-gap: 1.5rem;
       }
       .card-wrapper {
-        height: 100vh;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -260,11 +266,7 @@ const SingleProduct = (props) => {
             <h2 class="product-title">{productdata.name}</h2>
             {/* <a href = "/" class = "product-link">visit nike store</a> */}
             <div class="product-rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
+              <ReviewStars stars={productdata.stars}/>
               <span>
                 {productdata.stars}({productdata.reviews})
               </span>
@@ -300,7 +302,7 @@ const SingleProduct = (props) => {
               <p>{productdata.description}</p>
               <ul>
                 <li>
-                  Color: <span>Black </span>
+                 {productdata.colors ? <Colors colors={productdata.colors}/> : "Colors:" }
                 </li>
                 <li>
                   Available:{" "}
@@ -321,13 +323,7 @@ const SingleProduct = (props) => {
             </div>
 
             <div class="purchase-info">
-              <input type="number" min="0" value="1" max={productdata.stocks} />
-              <button type="button" class="btn">
-                Add to Cart <i class="fas fa-shopping-cart"></i>
-              </button>
-              <button type="button" class="btn">
-                Compare
-              </button>
+              <AddtoCart product={productdata}/>              
             </div>
 
             <div class="social-links">

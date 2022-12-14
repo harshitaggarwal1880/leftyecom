@@ -13,6 +13,7 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import { ProductProvider } from './Contexts/productcontext';
 import { ReducerProvider } from './Contexts/reducercontext';
+import { FiltercontextProvider } from './Contexts/filtercontext';
 
 
 const App = () => {
@@ -46,6 +47,7 @@ const App = () => {
   return (
     <ReducerProvider>
     <ProductProvider>
+    <FiltercontextProvider> 
     <ThemeProvider theme={theme}>
     <Router> 
 
@@ -64,6 +66,7 @@ const App = () => {
 
     </Router>
     </ThemeProvider>   
+    </FiltercontextProvider>
     </ProductProvider> 
     </ReducerProvider>
   )
