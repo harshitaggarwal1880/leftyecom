@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import styled from 'styled-components'
 import Filter from '../../Components/Filter/Filter';
 import Productlist from '../../Components/Productlist/Productlist';
@@ -10,23 +11,15 @@ const Products = () => {
 
   const filter_data = useFilterContext();
 
-  console.log(filter_data);
+  // console.log(filter_data);
 
-
-  const Wrapper = styled.section`
-  
-  .container{
-    display: grid;
-    grid-template-columns: auto auto;
+  // useEffect(() => {
     
-  }
-
-  .filter_section{
-    height: 100vh;
-    width: 20vw;
-  }
+  //   // filter_data.set_gridview();
+    
+  // }, [filter_data])
   
-  `;
+
   
   return (
     <Wrapper>
@@ -54,3 +47,23 @@ const Products = () => {
 }
 
 export default Products
+  const Wrapper = styled.section`
+
+  
+  .container{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    
+  }
+
+  .products_area{
+    margin: 1rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .container{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  `;

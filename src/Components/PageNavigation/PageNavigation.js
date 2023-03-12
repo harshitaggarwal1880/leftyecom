@@ -4,13 +4,6 @@ import { Link } from 'react-router-dom'
 
 const PageNavigation = (props) => {
   
-  const Wrapper = styled.section`
-  
-  padding: 2rem;
-  font-size: 1.3rem;
-
-  
-  `;
   
     return (
     <Wrapper> 
@@ -18,5 +11,14 @@ const PageNavigation = (props) => {
     </Wrapper>
   )
 }
+
+const Wrapper = styled.section`
+  
+  padding: 2rem;
+  font-size: 1.3rem;
+
+  
+  `;
+  
 
 export default PageNavigation

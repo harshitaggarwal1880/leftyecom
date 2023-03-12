@@ -8,37 +8,11 @@ import { MdEventAvailable } from "react-icons/md";
 const Services = () => {
   
 
-    const Services = styled.section`
-    
-    display: flex;
-    // flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    
-    .heading{
-        margin-top: 2rem;  
-        font-weight: 700;
-        text-align: center;
-        font-size: 2rem;
-    }
-
-
-    .services{
-        display: flex;
-        width: 80%;
-        gap: 1rem;
-        margin: 2rem 1rem;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    `;
+   
     
   
 return (
-    <Services>
+    <ServicesCom>
 
         <h1 className='heading'> Services </h1>
 
@@ -48,8 +22,35 @@ return (
             <Service icon={<SiBitcoincash/>} title={"Cash on Delivery Available"}/>
             <Service icon={<MdEventAvailable/>} title={"24/7 Available"}/>
         </div>
-    </Services> 
+    </ServicesCom> 
   )
 }
 
+const ServicesCom = styled.section`
+    
+display: flex;
+// flex-direction: column;
+justify-content: center;
+flex-wrap: wrap;
+align-items: center;
+
+.heading{
+    margin-top: 2rem;  
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.services{
+    display: flex;
+    width: 80%;
+    gap: 1rem;
+    margin: 2rem 1rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+`;
 export default Services

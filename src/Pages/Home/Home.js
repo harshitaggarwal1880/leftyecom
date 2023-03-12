@@ -20,7 +20,7 @@ const Home = () => {
     <Slider data={data} />
     <FeaturedProducts/>
     <Services/>
-    <Partners/>
+    {/* <Partners/> */}
     </>
   )
 

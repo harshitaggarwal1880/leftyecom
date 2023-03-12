@@ -1,9 +1,12 @@
 
 import React from 'react'
+import List_card from '../List_card/List_card'
 
-const Listlist = () => {
+const Listlist = ({data}) => {
   return (
-    <div>Listlist</div>
+    data.filter_products.map((ele,index)=>{
+      return <List_card data={ele} key={index} />
+    })
   )
 }
 

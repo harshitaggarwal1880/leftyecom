@@ -3,17 +3,54 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Card = (props) => {
-  const Card = styled.section`
+  return (
+    <CardCom>
+      <div class="card">
+        <Link to={`/product/${props.data.id}`}>
+          <div class="imgBox">
+            <img src={props.data.image} alt={props.data.name} class="mouse" />
+          </div>
+        </Link>
+
+        <div class="contentBox">
+          <h3>{props.data.name}</h3>
+          <h2 class="price">
+            {Intl.NumberFormat("en-IN", {
+              style: "currency",
+              currency: "INR",
+              maximumFractionDigits: 2,
+            }).format(props.data.price / 100)}
+          </h2>
+          <Link to="/buynow" class="buy">
+            Buy Now
+          </Link>
+        </div>
+      </div>
+    </CardCom>
+  );
+};
+
+const CardCom = styled.section`
     @import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
 
     
     font-family: "Istok Web", sans-serif;
     
 
+    width: 30%;
+    max-width: 15rem;
+
+
+    @media screen and (max-width:425px){
+
+      width: 100%;
+    }
+
+
     .card {
       position: relative;
-      width: 17rem;
-      height: 95%;
+      // width: 15rem;
+      // height: 95%;
       background: #191919;
       border-radius: 20px;
       overflow: hidden;
@@ -36,7 +73,7 @@ const Card = (props) => {
     }
 
     .card::after {
-      content: "${props.data.company}";
+      content: "Content";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -68,12 +105,13 @@ const Card = (props) => {
   */
     .card .contentBox {
       position: relative;
-      padding: 20px;
+      // padding: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       z-index: 2;
+      text-align: center;
     }
 
     .card .contentBox h3 {
@@ -112,36 +150,8 @@ const Card = (props) => {
     }
 
     .mouse {
-      height: 200px;
+      height: 10rem;
       width: auto;
     }
   `;
-
-  return (
-      <Card>
-      <div class="card">
-        <Link to={`/product/${props.data.id}`}>
-        <div class="imgBox">
-          <img
-            src={props.data.image}
-            alt={props.data.name}
-            class="mouse"
-          />
-        </div>
-    </Link>
-
-        <div class="contentBox">
-          <h3>{props.data.name}</h3>
-          <h2 class="price">
-            {Intl.NumberFormat("en-IN", {style: "currency", currency:"INR",maximumFractionDigits:2}).format(props.data.price/100) }
-          </h2>
-          <Link to="/buynow" class="buy">
-            Buy Now
-          </Link>
-        </div>
-      </div>
-    </Card>
-  );
-};
-
 export default Card;

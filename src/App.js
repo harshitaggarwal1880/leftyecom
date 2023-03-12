@@ -16,6 +16,9 @@ import { ReducerProvider } from './Contexts/reducercontext';
 import { FiltercontextProvider } from './Contexts/filtercontext';
 
 
+
+
+
 const App = () => {
 
   const theme = {

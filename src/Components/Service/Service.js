@@ -5,7 +5,24 @@ import styled from 'styled-components'
 const Service = (props) => {
 
 
-    const Card = styled.div`
+    
+
+  return (
+    <Card>
+        <div className="content">
+            
+            <div className="icon">{props.icon} </div>
+            
+            <div className="title">{props.title}</div>
+            
+            <p className="desc">Lorem ipsum dolor sit amet </p>
+
+        </div>
+    </Card>
+  )
+}
+
+const Card = styled.div`
 
     width: 20rem;
     text-align: center;
@@ -33,20 +50,5 @@ const Service = (props) => {
 
         
     `;
-
-  return (
-    <Card>
-        <div className="content">
-            
-            <div className="icon">{props.icon} </div>
-            
-            <div className="title">{props.title}</div>
-            
-            <p className="desc">Lorem ipsum dolor sit amet </p>
-
-        </div>
-    </Card>
-  )
-}
 
 export default Service
