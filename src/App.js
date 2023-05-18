@@ -14,6 +14,7 @@ import Footer from './Components/Footer/Footer';
 import { ProductProvider } from './Contexts/productcontext';
 import { ReducerProvider } from './Contexts/reducercontext';
 import { FiltercontextProvider } from './Contexts/filtercontext';
+import { CartProvider } from './Contexts/cartcontext';
 
 
 
@@ -51,6 +52,7 @@ const App = () => {
     <ReducerProvider>
     <ProductProvider>
     <FiltercontextProvider> 
+    <CartProvider>
     <ThemeProvider theme={theme}>
     <Router> 
 
@@ -69,6 +71,7 @@ const App = () => {
 
     </Router>
     </ThemeProvider>   
+    </CartProvider>
     </FiltercontextProvider>
     </ProductProvider> 
     </ReducerProvider>

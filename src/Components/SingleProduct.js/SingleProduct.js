@@ -90,13 +90,13 @@ const SingleProduct = (props) => {
               <h2>about this item: </h2>
               <p>{productdata.description}</p>
               <ul>
-                <li>
+                {/* <li>
                   {productdata.colors ? (
                     <Colors colors={productdata.colors} />
                   ) : (
                     "Colors:"
                   )}
-                </li>
+                </li> */}
                 <li>
                   Available:{" "}
                   <span>
@@ -115,7 +115,7 @@ const SingleProduct = (props) => {
               </ul>
             </div>
 
-            <div class="purchase-info">
+            <div class="purchase-info" >
               <AddtoCart product={productdata} />
             </div>
 

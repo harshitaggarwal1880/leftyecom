@@ -7,6 +7,7 @@ import reducer from "../reducers/contextreducer";
 const ReducerContext = createContext();
 
 const ApiUrl = "https://api.pujakaitem.com/api/products";
+// const ApiUrl = "http://localhost:5000/products";
 
 const ReducerProvider = (props) => {
     

@@ -31,7 +31,7 @@ const ProductProvider = (props)=>{
 
     const getapiproducts = async (url)=>{
         const res = await axios.get(url);
-        const products = res.data;
+        const products = await res.data;
         console.log(products);
     }
 

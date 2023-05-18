@@ -4,9 +4,12 @@ import styled from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
 import { useState } from "react";
+import { useCartContext } from "../../Contexts/cartcontext";
 
 const Navbar = () => {
   const [Menu, setMenu] = useState();
+
+  const { total_items} = useCartContext()
 
   return (
     <Nav>
@@ -77,8 +80,7 @@ const Navbar = () => {
                 }}
                 className="cart-total"
               >
-                {" "}
-                10{" "}
+                {total_items}
               </span>
             </Link>
           </li>
